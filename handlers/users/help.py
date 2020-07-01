@@ -13,6 +13,7 @@ async def bot_help(message: types.Message):
         '/start - Начать диалог',
         '/help - Получить справку',
         '/menu - Вызов меню товаров',
-        '/items - Вызов меню покупки'
+        '/items - Вызов меню покупки',
+        '/test - Пройти шутливый тест'
     ]
     await message.answer('\n'.join(text))
