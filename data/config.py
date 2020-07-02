@@ -9,10 +9,10 @@ URL_CPU = os.getenv("URL_CPU")
 URL_GPU = os.getenv("URL_GPU")
 URL_SSD = os.getenv("URL_SSD")
 admins = [
-    os.getenv("admin_id"),
-]
+    os.getenv("ADMIN_IP"),
+    ]
 
-ip = os.getenv("ip")
+ip = os.getenv("IP")
 
 aiogram_redis = {
     'host': ip,
