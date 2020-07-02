@@ -1,4 +1,7 @@
+import asyncio
+
 from loader import bot, storage, db
+from utils.db_api.sql import create_db
 
 
 async def on_startup(dp):
@@ -7,6 +10,8 @@ async def on_startup(dp):
     filters.setup(dp)
     middlewares.setup(dp)
     from utils.notify_admins import on_startup_notify
+    await asyncio.sleep(10)
+    await create_db()
     await on_startup_notify(dp)
 
 

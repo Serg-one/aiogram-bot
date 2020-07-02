@@ -1,4 +1,4 @@
-CREATE TABLE users
+CREATE TABLE if not exists users
 (
     chat_id   BIGINT NOT NULL
         CONSTRAINT users_pk
@@ -12,4 +12,4 @@ CREATE TABLE users
 
 ALTER TABLE users OWNER TO postgres;
 
-CREATE UNIQUE INDEX users_id_uindex ON users(id);
+CREATE UNIQUE INDEX if not exists users_id_uindex ON users(id);

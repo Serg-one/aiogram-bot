@@ -3,15 +3,29 @@ version: '3.1'
 services:
 
   db:
+    container_name: database
     image: postgres
     restart: always
-    environment:
-      POSTGRES_PASSWORD: example
-    network_mode: "host"
+    ports:
+    - 5432:5432
+    env_file:
+      - ".env"
 
   adminer:
+    container_name: adminer
     image: adminer
     restart: always
     ports:
       - 8080:8080
-    network_mode: "host"
+
+  tgbot:
+    container_name: bot
+    depends_on:
+      - db
+    build:
+      context: .
+    command: python app.py
+    restart: always
+
+    env_file:
+      - ".env"
