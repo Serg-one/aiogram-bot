@@ -13,4 +13,4 @@ logging.basicConfig(format=u'%(filename)s [LINE:%(lineno)d] #%(levelname)-8s [%(
 bot = Bot(token=config.BOT_TOKEN, parse_mode=types.ParseMode.HTML)
 storage = MemoryStorage()
 dp = Dispatcher(bot, storage=storage)
-db = dp.loop.run_until_complete(create_pool())
+# db = dp.loop.run_until_complete(create_pool())
