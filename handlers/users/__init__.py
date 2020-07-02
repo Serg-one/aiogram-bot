@@ -1,4 +1,5 @@
 from .goro import dp
+from .db_handlers import dp
 from .testing import dp
 from .help import dp
 from .items import dp

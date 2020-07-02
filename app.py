@@ -1,4 +1,4 @@
-from loader import bot, storage # db
+from loader import bot, storage, db
 
 
 async def on_startup(dp):
@@ -6,7 +6,6 @@ async def on_startup(dp):
     import middlewares
     filters.setup(dp)
     middlewares.setup(dp)
-
     from utils.notify_admins import on_startup_notify
     await on_startup_notify(dp)
 
