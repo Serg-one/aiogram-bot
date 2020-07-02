@@ -1,4 +1,4 @@
-from loader import bot, storage
+from loader import bot, storage, db
 
 
 async def on_startup(dp):
@@ -14,7 +14,7 @@ async def on_startup(dp):
 async def on_shutdown(dp):
     await bot.close()
     await storage.close()
-
+    await db.close()
 
 if __name__ == '__main__':
     from aiogram import executor
