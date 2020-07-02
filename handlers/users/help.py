@@ -14,6 +14,7 @@ async def bot_help(message: types.Message):
         '/help - Получить справку',
         '/menu - Вызов меню товаров',
         '/items - Вызов меню покупки',
-        '/test - Пройти шутливый тест'
+        '/test - Пройти шутливый тест',
+        '/goro - Получить гороскоп'
     ]
     await message.answer('\n'.join(text))

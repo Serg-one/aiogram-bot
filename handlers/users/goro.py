@@ -33,10 +33,10 @@ third = ["Злые языки могут говорить вам обратно�
          "Если встретите незнакомца на пути — проявите участие, и тогда эта встреча посулит вам приятные хлопоты."]
 
 
-def create_goroscope():
-    msg = random.choice(first) + ' ' + random.choice(second) + ' ' + random.choice(second_add) + ' ' \
-          + random.choice(third)
-    return msg
+# def create_goroscope():
+#     msg = random.choice(first) + ' ' + random.choice(second) + ' ' + random.choice(second_add) + ' ' \
+#           + random.choice(third)
+#     return msg
 
 
 @dp.message_handler(Command('goro'))
@@ -48,7 +48,9 @@ async def start_goroscope(message: Message):
 async def choose_cpu(call: CallbackQuery, callback_data: dict):
     await call.answer(cache_time=60)
     logging.info(f"call = {callback_data}")
-    await call.message.answer(create_goroscope(), reply_markup=None)
+    msg = random.choice(first) + ' ' + random.choice(second) + ' ' + random.choice(second_add) + \
+          ' ' + random.choice(third)
+    await call.message.answer(msg, reply_markup=None)
 
 
 @dp.callback_query_handler(zodiac_callback.filter(item_name="Back"))
