@@ -8,6 +8,8 @@ services:
     restart: always
     ports:
     - 5432:5432
+    environment:
+      POSTGRES_PASSWORD: example
     env_file:
       - ".env"
 
@@ -26,6 +28,5 @@ services:
       context: .
     command: python app.py
     restart: always
-
     env_file:
       - ".env"

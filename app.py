@@ -1,6 +1,6 @@
 import asyncio
 
-from loader import bot, storage, db
+from loader import bot, storage
 from utils.db_api.sql import create_db
 
 
