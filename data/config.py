@@ -10,16 +10,16 @@ admins = [
     os.getenv("ADMIN_ID"),
 ]
 
-ip = os.getenv("IP")
+IP = os.getenv("IP")
 PG_USER = os.getenv("PG_USER")
 PG_PASS = os.getenv("PG_PASS")
 
 aiogram_redis = {
-    'host': ip,
+    'host': IP,
 }
 
 redis = {
-    'address': (ip, 6379),
+    'address': (IP, 6379),
     'encoding': 'utf8'
 }
 

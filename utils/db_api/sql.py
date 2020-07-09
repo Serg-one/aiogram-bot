@@ -2,21 +2,24 @@ import asyncio
 import asyncpg
 import logging
 
-from data.config import ip, PG_USER, PG_PASS
+from pathlib import Path
+from data.config import IP, PG_USER, PG_PASS
 
 logging.basicConfig(format=u'%(filename)s [LINE:%(lineno)d] #%(levelname)-8s [%(asctime)s]  %(message)s',
                     level=logging.INFO,
                     )
 
+sql_script = Path('utils/db_api/create_db.sql')
+
 
 async def create_db():
     logging.info("Connecting to database...")
 
-    create_db_command = open("create_db.sql", 'r').read()
+    create_db_command = open(sql_script, 'r').read()
     conn: asyncpg.Connection = await asyncpg.connect(
         user=PG_USER,
         password=PG_PASS,
-        host=ip
+        host=IP
     )
     await conn.execute(create_db_command)
 
@@ -28,7 +31,7 @@ async def create_pool():
     return await asyncpg.create_pool(
         user=PG_USER,
         password=PG_PASS,
-        host=ip
+        host=IP
     )
 
 
