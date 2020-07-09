@@ -127,6 +127,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+.idea/
 .idea/$CACHE_FILE$
 .idea/.gitignore
 .idea/aiogram-bot-template.iml
