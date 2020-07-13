@@ -1,7 +1,7 @@
 # aiogram-bot
 
 ### EN
-Simple entertaining Telegram bot based on aiogram with architecture provided by [Latand](https://github.com/Latand/aiogram-bot-template)  
+Simple entertaining Telegram bot based on aiogram architecture provided by [Latand](https://github.com/Latand/aiogram-bot-template)  
 ### Run project  
     docker-compose up --build
 ### Commands list
@@ -15,7 +15,7 @@ Simple entertaining Telegram bot based on aiogram with architecture provided by 
 
 ***
 ### RU
-Простой разлекательный Telegram бот, построенный на архитектуре предоставленной [Latand](https://github.com/Latand/aiogram-bot-template)  
+Простой разлекательный Telegram бот, построенный на aiogram архитектуре предоставленной [Latand](https://github.com/Latand/aiogram-bot-template)  
 ### Запуск проекта
     docker-compose up --build
 ### Список команд
